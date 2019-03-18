@@ -1,0 +1,10 @@
+# Rose-Code-Challange
+
+var x instead of = r * cos(a) now = (r+15) * cos(a).
+- this just translates it horizontaly
+
+var y instead of = r * sin(a) now = (r*1.2) * sin(a).
+- this stretches the rose vertically
+
+vertex(x+sin(x), y) is now vertex(x+sin(x^2), y)
+- this moves the vertext around a small radius around the center of the page.
