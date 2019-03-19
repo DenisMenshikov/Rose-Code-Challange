@@ -21,21 +21,6 @@ Flower.prototype.grow = function(){
 };
 
 
-
-	beginShape();
-  stroke(255);
-  noFill();
-  strokeWeight(1);
-  for (var a = 0; a < TWO_PI * reduceDenominator(n, d); a += 0.02) {
-    var r = 200 * cos(k * a);
-    var x = (r+15) * cos(a);
-    var y = (r*1.2) * sin(a);
-    vertex(x+sin(x^2), y);
-  }
-  endShape(CLOSE);
-	
-};
-
 function draw() {
   d = sliderD.value();
   n = sliderN.value();
@@ -44,7 +29,18 @@ function draw() {
   push();
   translate(width / 2, height / 2);
   
-	var rose1 = new Rose(100, 100);
+	beginShape();
+  stroke(0);
+  strokeWeight(1);
+  for (var a = 0; a < TWO_PI * reduceDenominator(n, d); a += 0.02) {
+    var r = 200 * cos(k * a);
+    var x = (r+15) * cos(a);
+    var y = (r*1.2) * sin(a);
+    vertex(x+sin(x^2), y);
+		fill(random(0,255), random(0,255), random(0,255));
+  }
+  endShape(CLOSE);
+	
 	
 	pop();
   noLoop();
